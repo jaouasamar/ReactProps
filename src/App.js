@@ -1,10 +1,12 @@
 
 import './App.css';
 
+import ProductList from './Components/ProductList/ProductList';
+
 function App() {
   return (
     <div className="App">
-     Hello Props
+    <ProductList name="Samar" city="Sfax"/> 
     </div>
   );
 }
