@@ -24,9 +24,14 @@ function App() {
     }
 
   ]
+  const handleClick = (productName) => {
+    alert(`this product is ${productName}`)
+  }
+  
   return (
     <div className="App">
-    <ProductList produits = {products} /> 
+      <h1>Workshop React props</h1>
+    <ProductList produits = {products} handleClick={handleClick}/> 
     </div>
   );
 }

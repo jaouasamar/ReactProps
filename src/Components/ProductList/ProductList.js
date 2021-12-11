@@ -2,10 +2,10 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import ProductItem from "../ProductItem/ProductItem";
 
-const ProductList = ({ produits }) => {
+const ProductList = ({ produits,handleClick}) => {
   return (
     <div>
-      <Table striped bordered hover>
+      <Table striped bordered hover className="mx-5 my-5">
         <thead>
           <tr>
             <th>#</th>
@@ -15,7 +15,7 @@ const ProductList = ({ produits }) => {
           </tr>
         </thead>
         <tbody>
-            {produits.map((elt,index) => <ProductItem produit={elt} key={index}/>)}
+            {produits.map((elt,index) => <ProductItem produit={elt} key={index} handleClick={handleClick}/>)}
         </tbody>
       </Table>
     </div>
