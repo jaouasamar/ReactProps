@@ -1,11 +1,16 @@
 import React from 'react'
 
-const ProductItem = () => {
-
+const ProductItem = ({produit}) => {
+    console.log(produit);
     return (
-        <div>
-            
-        </div>
+    
+          <tr>
+              <td><button>Click Me</button></td>
+              <td>{produit.name}</td>
+              <td><img src={produit.imgSrc} alt="" width="150"/></td>
+              <td>{produit.price}</td>
+          </tr>
+        
     )
 }
 
