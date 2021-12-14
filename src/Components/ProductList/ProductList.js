@@ -1,11 +1,12 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import ProductItem from "../ProductItem/ProductItem";
+import PropTypes from 'prop-types';
 
 const ProductList = ({ produits,handleClick}) => {
   return (
     <div>
-      <Table striped bordered hover className="mx-5 my-5">
+      <Table striped bordered hover className="mx-auto">
         <thead>
           <tr>
             <th>#</th>
@@ -21,5 +22,9 @@ const ProductList = ({ produits,handleClick}) => {
     </div>
   );
 };
+ProductList.propTypes = {
+    produits: PropTypes.array,
+    handleClick: PropTypes.func
 
+}
 export default ProductList;

@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const ProductItem = ({produit,handleClick}) => {
-    console.log(produit);
+    // console.log(produit);
     return (
     
           <tr>
@@ -12,6 +13,10 @@ const ProductItem = ({produit,handleClick}) => {
           </tr>
         
     )
+}
+ProductItem.propTypes =
+{
+    produit:PropTypes.object
 }
 
 export default ProductItem
